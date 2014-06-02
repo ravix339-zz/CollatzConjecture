@@ -10,15 +10,17 @@ int collatz(unsigned long long int, unsigned long long int);
 void main()
 {//
 	unsigned long long int x = 1;
-	unsigned long long int count = 0;
 	while(1)
 	{
-		if (collatz(x, count) == 0)
+		if (collatz(x, 0) == 0)
 		{
-			cout << x << " doesnt work";
-			break;
+			cout << x << " doesnt work" << endl;
 		}
-		x++; 
+		else
+		{
+			cout << x << " works" <<endl;
+		}
+		x++;
 		if (x == MAX+1)
 			break;
 	}
